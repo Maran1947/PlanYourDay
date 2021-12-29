@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.planyourday_container {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #6aedcf, #00c1d7, #0090e1, #005ad4, #1e009a);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
+  width: 60vw;
+  height: 100%;
+  padding-top: 40px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.right {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 240px 0px 0px 180px;
+}
+
+.right form label {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.right form input {
+  width: 100%;
+  margin-top: 4px;
+  height: 34px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: rgb(225, 237, 248);
+}
+
+.right form button {
+  width: 100%;
+  background-color: rgba(55, 85, 255, 0.699);
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:16px;
+  font-weight:bold;
+  padding: 10px 32px;
+  text-decoration:none;
+  outline: none;
+  border: none;
+  margin-top: 10px;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 1.4;
+  padding: 30px 40px;
+  margin: 30px 40px;
+  box-shadow: 10px 10px 20px 0px rgb(46, 255, 39);
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.76);
+  -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.76);
+}
+
+.box span {
+  display: block;
+}
+
+i {
+  margin: 0px 2px;
+}
+
+i:hover {
+  transform: translate(-5%,-5%);
+}
+
+.red {
+  color: #f00;
+}
+
+.green {
+  color: #0f0;
+}
+
+.no_task {
+  color: #fff;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-left: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: rotateY(0deg);
+  }
+  25% {
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+    transform: rotateX(-45deg);
+  }
+  50%{
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: rotateY(45deg);  
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: rotateY(0deg);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(255, 255, 255);
+  border-radius: 10px;
+  margin: 20px 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(17, 100, 255);
+  border-radius: 10px;
 }
