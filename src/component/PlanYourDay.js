@@ -43,12 +43,8 @@ function PlanYourDay() {
         setTasks(JSON.parse(localStorage.getItem("Tasks")));
     }
 
-    function getTasks() {
-        setTasks(JSON.parse(localStorage.getItem("Tasks")));
-    }
-
     useEffect(() => {
-        getTasks();
+        setTasks(JSON.parse(localStorage.getItem("Tasks")));
     }, []);
 
     return (
@@ -80,7 +76,6 @@ function PlanYourDay() {
                     </div>
                 }
             </div>
-
         </div>
     )
 }
